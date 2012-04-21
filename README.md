@@ -3,7 +3,7 @@ Easy-PHP-MySQL
 
 Easy-PHP-MySQL simplifies and shortens the process of connecting and querying one or more databases in PHP.
 
-Usage:
+<span style="font-size: 16px; font-weight: bold;">Usage:</span>
 
 1) Place db_connect.php on your server.
 <br /><br />2) Edit db_connect.php configurations by adding your database credentials.  You may add as many or as few databases as you would like.  The naming convention (not required) is "db1", "db2", "db3", etc...
@@ -18,7 +18,7 @@ Example:
 Create a new connection
 `$users = new Connection();`
 
-Create a query (View documentation for an example.
+Create a query (View documentation for an example).
 `$users = $users->query("db1","SELECT * FROM users");`
 
 Do what ever you want with the query's result.
