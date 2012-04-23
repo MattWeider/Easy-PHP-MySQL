@@ -28,7 +28,7 @@ Usage:
 <br /><br />3) Done with configuration!
 <br /><br />4) Include db_connect.php in any file you wish to have database communication with. (For help including, view "example.php")
 <br /><br />5) Create a connection: `$mydb = new Connection("db1");` (choose a variable that reflects what database you are using, I used "$mydb".  Your database variable (what you used in db_connect.php) goes inside of the new Connection class).
-<br /><br />6) Create a statement: `$getusers = $mydb->query("SELECT * FROM `users`");`
+<br /><br />6) Create a statement: `$getusers = $mydb->query("SELECT * FROM users");`
 <br /><br />7) Done!  Now you can do as you wish with your query using your variable (mine: $getusers).  Check out example.php to see shortcodes.
 
 Example:
