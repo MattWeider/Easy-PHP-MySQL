@@ -2,17 +2,17 @@
 
 include 'db_connect.php';  //include the db_connect.php file
 
-//Create a new connection
-$get = new Connection();
+//Create and set a new connection
+$get = new Connection("db1"); //"db1" is user defined in db_connect.php
 
-//Format - 'use variable you created connection with' = 'use variable you created connection with'->query("database defined in db_connect.php", "SQL Statement");
-$get = $get->query("db1","SELECT * FROM `users`");
+//Create a query: $var->query("SQL_STATEMENT"); $var is the variable you created a connection with.
+$selectusers = $get->query("SELECT * FROM users");
 
-//Do whatever you like with the query
-echo mysql_num_rows($get);
+//Do whatever you would like with the query
+echo mysql_num_rows($selectusers);
 
-$test = new Connection();
-$test = $test->query("db2","SELECT * FROM `users`");
-echo mysql_num_rows($test);
+//Use built in functions to make one line queries.
+echo  $get->fetch($selectusers);  //fetch() fetches the associated rows.  More quick functions coming soon.
+
 
 ?>
